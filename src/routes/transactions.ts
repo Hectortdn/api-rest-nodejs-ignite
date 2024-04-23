@@ -3,8 +3,7 @@ import crypto from "node:crypto";
 import { FastifyInstance } from "fastify";
 
 import { knex } from "../database";
-import { checkSessionIdExists } from "../middlewares/check-session-Id-exists";
-import { request } from "node:http";
+import { checkSessionIdExists } from "../middlewares/check-session-id-exists";
 
 export async function transactionsRoutes(app: FastifyInstance) {
   app.post("/", async (request, reply) => {
